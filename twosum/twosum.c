@@ -18,17 +18,12 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
   
     int* result = (int *)malloc(sizeof(int)*2);
     int i, j;
-    int a, b;
   
     for (i=0; i<numsSize-1; i++) {
       
-      a = nums[i];
-    	
       for (j=i+1; j<numsSize; j++) {
         
-        b = nums[j];
-        
-    		if ((a + b) == target) {
+    		if ((nums[i] + nums[j]) == target) {
           
     			result[0] = i;
     			result[1] = j;
