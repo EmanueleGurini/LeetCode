@@ -9,14 +9,15 @@ int main() {
   int returnSize = 0;
 
   int* twoSumResult = twoSum(nums, numsSize, target, &returnSize);
-  printf("[%d %d]", twoSumResult[0], twoSumResult[1]);
-
+  printf("[%d %d]\n", twoSumResult[0], twoSumResult[1]);
   return 0; 
 }
 
 int* twoSum(int* nums, int numsSize, int target, int* returnSize){
-  
-    int* result = (int *)malloc(sizeof(int)*2);
+ 		
+ 		*returnSize = 2;
+
+    int* result = (int *)malloc(sizeof(int)*(*returnSize));
     int i, j;
   
     for (i=0; i<numsSize-1; i++) {
